@@ -1,0 +1,246 @@
+:root {
+    --primary: #C98000;
+    --font-heading: "Libre Caslon Text", serif;
+    --font-body: "Lato", sans-serif;
+    --ternary: #1B1A19;
+    --natural: #ffffff;
+    --text: #111827;
+    --bg: #FBF5E9;
+    --cardBg: #FAF2EB;
+    --gray: #444748;
+}
+
+.navbar-container {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: var(--bg);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-family: var(--font-body);
+}
+
+.navbar-capsule {
+    width: 100%;
+    max-width: 800px;
+    background-color: var(--ternary);
+    border-radius: 9999px;
+    padding: 12px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 10;
+}
+
+/* Logo Structuring */
+.navbar-logo-area {
+    width: 150px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-monogram {
+    font-family: var(--font-heading);
+    color: var(--primary);
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+.logo-divider {
+    width: 1px;
+    height: 28px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-name {
+    color: var(--natural);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.brand-highlight {
+    color: var(--primary);
+}
+
+.brand-subtitle {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 6px;
+    letter-spacing: 1.2px;
+    margin-top: 1px;
+}
+
+/* Center Links styling */
+.navbar-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary);
+}
+
+/* Right-Side Contact Buttons */
+.navbar-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.action-btn {
+    width: 34px;
+    height: 34px;
+    background-color: var(--cardBg);
+    color: var(--primary);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+    background-color: var(--natural);
+}
+
+/* Responsive Mobile Breakpoints */
+.mobile-burger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.mobile-burger span {
+    display: block;
+    width: 16px;
+    height: 2px;
+    background-color: var(--natural);
+    transition: 0.3s ease;
+}
+
+/* .resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background-color: var(--primary);
+  color: var(--natural);
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.resume-btn:hover {
+  background-color: var(--ternary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+} */
+
+.resume-btn:active {
+  transform: scale(0.98);
+}
+
+.resume-btn svg {
+  width: 20px;
+  height: 20px;
+}
+.resume-download{
+    color: var(--natural);
+    text-decoration: underline;
+    text-decoration-color: var(--primary);
+}
+
+/* Mobile Screen Query adjustments */
+@media (max-width: 576px) {
+    .navbar-links {
+        display: none;
+    }
+
+    .mobile-burger {
+        display: flex;
+    }
+
+    .navbar-capsule {
+        padding: 12px 20px;
+        border-radius: 30px;
+    }
+
+    .mobile-burger.open span:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+    }
+
+    .mobile-burger.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-burger.open span:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+    }
+
+    .mobile-menu-drawer {
+        position: absolute;
+        top: 85px;
+        left: 20px;
+        right: 20px;
+        background-color: var(--ternary);
+        border-radius: 16px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        z-index: 9;
+        margin-top: 20px;
+    }
+
+    .mobile-menu-drawer a {
+        color: var(--natural);
+        text-decoration: none;
+        font-size: 16px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .navbar-logo-area{
+        width: 120px;
+        height: 40px;
+    }
+    .action-btn{
+        width: 28px;
+        height: 28px;
+    }
+    .action-btn svg{
+        width: 16px;
+        height: 16px;
+    }
+   
+}

@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --primary: #C98000;
+  --font-heading: "Libre Caslon Text", serif;
+  --font-body: "Lato", sans-serif;
+  --ternary: #1B1A19;
+  --natural: #ffffff;
+  --text: #111827;
+
+  /* Card and Background Tones */
+  --bg-start: #FBF5E9;
+  --bg-end: #FFEECB;
+  --gray: #444748;
+  --dark-bg: #1F1F1F;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Outer Section Styling */
+.services-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--dark-bg);
+  /* Diamond Radial Gradient as specified in second image */
+  background-image: radial-gradient(ellipse at center,
+      rgba(201, 128, 0, 0.45) 0%,
+      #1F1F1F 80%);
+  font-family: var(--font-body);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  overflow: hidden;
+}
+
+/* Background Diamond Decorative Elements */
+.bg-diamond-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(135deg, rgba(201, 128, 0, 0.05) 25%, transparent 25%) -30px 0,
+    linear-gradient(225deg, rgba(201, 128, 0, 0.05) 25%, transparent 25%) -30px 0,
+    linear-gradient(315deg, rgba(201, 128, 0, 0.05) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(201, 128, 0, 0.05) 25%, transparent 25%);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+/* Inner Container */
+.services-container {
+  max-width: 1280px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: start;
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 992px) {
+  .services-container {
+    grid-template-columns: 0.6fr 1.2fr;
+    align-items: start;
+  }
+}
+
+/* Left Content Section */
+.left-content {
+  color: var(--natural);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.sub-title {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #D1D5DB;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.title-underline {
+  width: 40px;
+  height: 3px;
+  background-color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.main-title {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  line-height: 1.25;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.illustration-wrapper {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 320px;
+  position: absolute;
+  bottom: -33.575rem;
+  left: 0;
+}
+
+.illustration-wrapper svg {
+  width: 100%;
+  height: auto;
+}
+
+/* Right Services Grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 640px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 767px) {
+  .illustration-wrapper {
+    display: none;
+  }
+}
+
+@media (min-width: 1100px) {
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Card Styling */
+.service-card {
+  background: linear-gradient(180deg, var(--bg-start) 0%, var(--bg-end) 100%);
+  border-radius: 4px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(201, 128, 0, 0.2);
+}
+
+.card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  border: 1px solid rgba(201, 128, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: var(--primary);
+}
+
+.card-title {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  color: var(--text);
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.card-description {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--gray);
+}
