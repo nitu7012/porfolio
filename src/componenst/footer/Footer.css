@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --primary: #C98000;
+  --font-heading: "Libre Caslon Text", serif;
+  --font-body: "Lato", sans-serif;
+  --ternary: #1B1A19;
+  --natural: #ffffff;
+  --text: #111827;
+
+  /* Card and Background Tones */
+  --bg-start: #FBF5E9; 
+  --bg-end: #FFEECB; 
+  --gray: #444748;
+  --dark-bg: #1F1F1F;
+  --dark-accent: #533603;
+}
+
+/* Footer Outer Container */
+.nsk-footer-section {
+  width: 100%;
+  background: linear-gradient(180deg, var(--dark-bg) 60%, var(--dark-accent) 100%);
+  color: var(--natural);
+  font-family: var(--font-body);
+  padding: 60px 20px 30px 20px;
+  box-sizing: border-box;
+}
+
+.nsk-footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Top Main Layout Grid */
+.nsk-footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 30px;
+}
+
+/* 1. Left Logo Section */
+.nsk-footer-logo-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nsk-footer-logo-mark {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.nsk-footer-logo-divider {
+  width: 1px;
+  height: 38px;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.nsk-footer-logo-text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.nsk-footer-logo-title {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: var(--primary);
+  text-transform: uppercase;
+}
+
+.nsk-footer-logo-subtitle {
+  font-size: 0.62rem;
+  letter-spacing: 1.2px;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+/* 2. Middle Navigation Links */
+.nsk-footer-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nsk-footer-nav-link {
+  color: var(--natural);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.nsk-footer-nav-link:hover {
+  color: var(--primary);
+}
+
+/* 3. Right Contact Details */
+.nsk-footer-contact-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nsk-footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--natural);
+}
+
+.nsk-footer-icon-badge {
+  background-color: var(--primary);
+  color: var(--natural);
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.nsk-footer-contact-label {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.nsk-footer-contact-value {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+}
+
+.nsk-footer-contact-value:hover {
+  color: var(--primary);
+}
+
+/* Separator Line */
+.nsk-footer-separator {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin: 0;
+}
+
+/* Bottom Copyright Text */
+.nsk-footer-bottom {
+  text-align: center;
+  padding-top: 24px;
+}
+
+.nsk-footer-copyright {
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.75);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Responsive UI */
+@media (max-width: 992px) {
+  .nsk-footer-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 28px;
+  }
+
+  .nsk-footer-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .nsk-footer-contact-box {
+    align-items: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .nsk-footer-section {
+    padding: 40px 16px 20px 16px;
+  }
+
+  .nsk-footer-logo-box {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .nsk-footer-logo-divider {
+    width: 40px;
+    height: 1px;
+  }
+
+  .nsk-footer-nav {
+    gap: 14px 20px;
+  }
+
+  .nsk-footer-nav-link {
+    font-size: 0.8rem;
+  }
+
+  .nsk-footer-contact-item {
+    font-size: 0.82rem;
+  }
+
+  .nsk-footer-copyright {
+    font-size: 0.7rem;
+  }
+}

@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --primary: #C98000;
+  --font-heading: "Libre Caslon Text", serif;
+  --font-body: "Lato", sans-serif;
+  --ternary: #1B1A19;
+  --natural: #ffffff;
+  --text: #111827;
+
+  /* Card and Background Tones */
+  --bg-start: #FBF5E9; 
+  --bg-end: #FFEECB; 
+  --gray: #444748;
+  --dark-bg: #1F1F1F;
+  --dark-accent: #533603;
+}
+
+/* Main Outer Container */
+.nsk-about-cta-section {
+  position: relative;
+  width: 100%;
+  background-color: var(--natural);
+  padding: 80px 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+/* Background Illustrations Container */
+.nsk-about-cta-bg-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Left Illustration (Idea Hand Lightbulb) */
+.nsk-about-cta-bg-left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  max-width: 380px;
+  width: 30vw;
+  height: auto;
+  object-fit: contain;
+  object-position: left bottom;
+}
+
+/* Right Illustration (Creative Woman Thinking) */
+.nsk-about-cta-bg-right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-width: 380px;
+  width: 30vw;
+  height: auto;
+  object-fit: contain;
+  object-position: right bottom;
+}
+
+/* Center Content Overlay */
+.nsk-about-cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+/* Main Heading Title */
+.nsk-about-cta-title {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--text);
+  margin: 0;
+}
+
+/* Social Buttons Grid */
+.nsk-about-cta-socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Black Icon Square Card */
+.nsk-about-cta-icon-card {
+  width: 52px;
+  height: 52px;
+  background-color: var(--dark-bg);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--natural);
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nsk-about-cta-icon-card:hover {
+  background-color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(201, 128, 0, 0.3);
+}
+
+.nsk-about-cta-icon-card svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+/* Responsive UI Adjustments */
+@media (max-width: 1024px) {
+  .nsk-about-cta-title {
+    font-size: 2.8rem;
+  }
+
+  .nsk-about-cta-bg-left,
+  .nsk-about-cta-bg-right {
+    max-width: 280px;
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: 768px) {
+  .nsk-about-cta-section {
+    padding: 60px 20px;
+  }
+
+  .nsk-about-cta-title {
+    font-size: 2.2rem;
+  }
+
+  /* Hide background illustrations completely on mobile devices */
+  .nsk-about-cta-bg-left,
+  .nsk-about-cta-bg-right {
+    display: none;
+  }
+
+  .nsk-about-cta-icon-card {
+    width: 46px;
+    height: 46px;
+  }
+
+  .nsk-about-cta-icon-card svg {
+    width: 18px;
+    height: 18px;
+  }
+}

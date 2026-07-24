@@ -9,8 +9,8 @@
     --text: #111827;
 
     /* Card and Background Tones */
-    --bg-start: #f0c062;
-    --bg-end: #927231;
+    --bg-start: #FBF5E9; 
+  --bg-end: #FFEECB; 
     --gray: #444748;
     --dark-bg: #1F1F1F;
 }

@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --primary: #C98000;
+  --font-heading: "Libre Caslon Text", serif;
+  --font-body: "Lato", sans-serif;
+  --ternary: #1B1A19;
+  --natural: #ffffff;
+  --text: #111827;
+
+  /* Card and Background Tones */
+  --bg-start: #FBF5E9; 
+  --bg-end: #FFEECB; 
+  --gray: #444748;
+  --dark-bg: #1F1F1F;
+  --dark-accent: #533603;
+}
+
+/* Main Section Wrapper with Diamond Gradient Background */
+.nsk-about-skills-section {
+  width: 100%;
+  background: radial-gradient(ellipse at center, var(--dark-accent) 0%, var(--dark-bg) 100%);
+  padding: 80px 20px;
+  box-sizing: border-box;
+  color: var(--natural);
+  font-family: var(--font-body);
+}
+
+.nsk-about-skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* Header Text Styles */
+.nsk-about-skills-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.nsk-about-skills-subtitle {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  letter-spacing: 1.2px;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  position: relative;
+  display: inline-block;
+}
+
+.nsk-about-skills-subtitle::after {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 2px;
+  background-color: var(--primary);
+  margin-top: 6px;
+}
+
+.nsk-about-skills-title {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--natural);
+  margin: 12px 0 0 0;
+}
+
+/* Skills Cards Grid */
+.nsk-about-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 16px;
+}
+
+.nsk-about-skill-card {
+  background: linear-gradient(180deg, var(--bg-start) 0%, var(--bg-end) 100%);
+  border-radius: 12px;
+  padding: 20px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nsk-about-skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(201, 128, 0, 0.25);
+}
+
+.nsk-about-skill-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nsk-about-skill-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.nsk-about-skill-name {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  color: var(--text);
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 850px) {
+  .nsk-about-skills-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .nsk-about-skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+}

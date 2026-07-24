@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --primary: #C98000;
+  --font-heading: "Libre Caslon Text", serif;
+  --font-body: "Lato", sans-serif;
+  --ternary: #1B1A19;
+  --natural: #ffffff;
+  --text: #111827;
+
+  /* Card and Background Tones */
+  --bg-start: #FBF5E9; 
+  --bg-end: #FFEECB; 
+  --gray: #444748;
+  --dark-bg: #1F1F1F;
+}
+
+.nsk-about-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 6rem auto;
+  padding: 80px 20px;
+  font-family: var(--font-body);
+  background-color: var(--natural);
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+
+.nsk-about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Left Content Styles */
+.nsk-about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nsk-about-section-tag {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--gray);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  position: relative;
+  display: inline-block;
+}
+
+.nsk-about-section-tag::after {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 2px;
+  background-color: var(--primary);
+  margin-top: 6px;
+}
+
+.nsk-about-main-heading {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  line-height: 1.25;
+  color: var(--text);
+  font-weight: 400;
+  margin: 16px 0 24px 0;
+}
+
+.nsk-about-description-text {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: 16px;
+  opacity: 0.9;
+}
+
+/* Button Group */
+.nsk-about-button-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.nsk-about-btn-primary {
+  background-color: var(--primary);
+  color: var(--natural);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.nsk-about-btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.nsk-about-btn-secondary {
+  background-color: transparent;
+  color: var(--text);
+  border: 1px solid var(--primary);
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.nsk-about-btn-secondary:hover {
+  background-color: rgba(201, 128, 0, 0.05);
+  transform: translateY(-1px);
+}
+
+/* Right Image Styles */
+.nsk-about-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 4.2;
+  background: linear-gradient(135deg, var(--bg-start) 0%, #fbd89a 100%);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.nsk-about-profile-image {
+  width: 85%;
+  height: auto;
+  object-fit: cover;
+  object-position: top center;
+  z-index: 2;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .nsk-about-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .nsk-about-main-heading {
+    font-size: 2rem;
+  }
+  
+  .nsk-about-button-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

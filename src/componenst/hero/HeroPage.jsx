@@ -48,12 +48,18 @@ export default function HeroSection() {
                         {/* Sliding Solid Background Slider Indicator */}
                         <div className="toggle-slider-pill"></div>
 
-                        <a href="#work" className="btn-action btn-work">
+                        <a href="#projects" className="btn-action btn-work">
                             View Work
-                            <ArrowUpRight className="arrow-icon" size={18} strokeWidth={2} />                        </a>
+                            <ArrowUpRight className="arrow-icon" size={18} strokeWidth={2} />
+                        </a>
 
-                        <a href="#contact" className="btn-action btn-hire">
-                            Hire me
+                        <a
+                            href="https://wa.me/919508062053?text=Hi%20Nitu,%20I%20would%20like%20to%20discuss%20a%20project."
+                            className="btn-action btn-hire"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Hire Me
                             <ArrowUpRight className="arrow-icon" size={18} strokeWidth={2} />
                         </a>
 
