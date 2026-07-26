@@ -11,7 +11,7 @@ const PROJECTS_DATA = [
     image: '/Realstate.png',
     btnType: 'primary',
     isLive: true,
-    liveUrl: 'https://your-live-realestate-site.com'
+    liveUrl: 'https://tinywebs.site/pWJbno'
   },
   {
     id: 2,
@@ -54,6 +54,28 @@ const PROJECTS_DATA = [
     btnType: 'secondary',
     isLive: true,
     liveUrl: 'https://ratheegreenhouse.com'
+  },
+  {
+    id: 2,
+    title: 'Bot Media Digital',
+    description: 'Modern redesign for a digital marketing agency.',
+    category: 'Redesigns',
+    video: '/botmedia.mp4', 
+    image: '/th.png',
+    btnType: 'primary',
+    isLive: false,
+    liveUrl: 'https://tinywebs.site/NQIBHa'
+  },
+  {
+    id: 2,
+    title: 'Scale Your Business With Next-Gen Digital Marketing',
+    description: 'We turn clicks into customers using data-driven strategies, ROI-focused campaigns, and high-impact brand designs.',
+    category: 'Redesigns',
+    video: '/botmedia.mp4', 
+    image: '/thn.png',
+    btnType: 'secondary',
+    isLive: false,
+    liveUrl: '/sequ.png'
   }
 ];
 
