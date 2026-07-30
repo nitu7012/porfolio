@@ -56,7 +56,7 @@ const PROJECTS_DATA = [
     liveUrl: 'https://ratheegreenhouse.com'
   },
   {
-    id: 2,
+    id: 6,
     title: 'Bot Media Digital',
     description: 'Modern redesign for a digital marketing agency.',
     category: 'Redesigns',
@@ -67,7 +67,7 @@ const PROJECTS_DATA = [
     liveUrl: 'https://tinywebs.site/NQIBHa'
   },
   {
-    id: 2,
+    id: 7,
     title: 'Scale Your Business With Next-Gen Digital Marketing',
     description: 'We turn clicks into customers using data-driven strategies, ROI-focused campaigns, and high-impact brand designs.',
     category: 'Redesigns',
@@ -76,7 +76,19 @@ const PROJECTS_DATA = [
     btnType: 'secondary',
     isLive: false,
     liveUrl: '/sequ.png'
-  }
+  },
+  {
+  id: 8,
+  title: 'Smart Rural Commerce Platform',
+  description:
+    'An AI-powered rural marketplace connecting local shopkeepers and customers through voice search, image recognition, and location-based shopping.',
+  category: 'Case Studies',
+  video: '/gramkart.mp4',
+  image: '/banner 4.png',
+  btnType: 'primary',
+  isLive: false,
+  liveUrl: 'https://l1nq.com/zxvpvcu'
+}
 ];
 
 const CATEGORIES = ['All', 'Live Projects', 'Case Studies', 'Redesigns', 'Web Design'];
