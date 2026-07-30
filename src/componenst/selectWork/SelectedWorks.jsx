@@ -87,7 +87,7 @@ const PROJECTS_DATA = [
   image: '/banner 4.png',
   btnType: 'primary',
   isLive: false,
-  liveUrl: 'https://l1nq.com/zxvpvcu'
+  liveUrl: 'https://www.figma.com/proto/HGJXIOmoHoWxkJYUlmowaG/SmartDesi-Dukan?node-id=0-4200&t=pwHCSsa5tf9PMF1x-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1'
 }
 ];
 
